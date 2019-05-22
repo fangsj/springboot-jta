@@ -1,6 +1,6 @@
 //*****************************************************************************
 //
-// File Name       :  org.fangsj.learn.spring.boot.jta
+// File Name       :  org.fangsj.learn.spring.boot.jta.dao.ExampleMapper
 // Created Date    :  2019-05-22
 // Created By      :  fangshijie
 // Last Changed By :  fangshijie
@@ -11,22 +11,18 @@
 // Keisdom Pte Ltd.  Copyright (c) 2019.  All Rights Reserved.
 //
 //*****************************************************************************
-package org.fangsj.learn.spring.boot.jta;
+package org.fangsj.learn.spring.boot.jta.dao;
 
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.fangsj.learn.spring.boot.jta.domain.Example;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
- * 说明
+ *
  *
  * @author fangshijie
- * @date 2019-05-22 14:52
+ * @date 2019-05-22 15:25
  */
-@SpringBootApplication
-@MapperScan("org.fangsj.learn.spring.boot.jta.dao")
-public class Application {
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+public interface ExampleMapper extends BaseMapper<Example> {
+
 }

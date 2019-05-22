@@ -18,7 +18,7 @@ spring:
         allow: true
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*Mapper.xml
-  type-aliases-package: org.fangsj.learn.spring.boot.jta
+  type-aliases-package: org.fangsj.learn.spring.boot.jta.domain
   global-config:
     db-config:
       id-type: auto
