@@ -1,0 +1,12 @@
+.gradle
+.idea
+build
+*.iml
+dev.properties
+**/test/resources/application.yml
+**/*.log
+.logs
+logs
+*log.*.gz
+out
+.DS_Store
