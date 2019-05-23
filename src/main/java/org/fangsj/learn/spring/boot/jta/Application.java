@@ -13,9 +13,12 @@
 //*****************************************************************************
 package org.fangsj.learn.spring.boot.jta;
 
-import org.mybatis.spring.annotation.MapperScan;
+import org.fangsj.learn.spring.boot.jta.config.DaoConfig;
+import org.fangsj.learn.spring.boot.jta.config.MyBatis1Config;
+import org.fangsj.learn.spring.boot.jta.config.MyBatis2Config;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
 /**
  * 说明
@@ -24,7 +27,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019-05-22 14:52
  */
 @SpringBootApplication
-@MapperScan("org.fangsj.learn.spring.boot.jta.dao")
+@Import({
+        DaoConfig.class,
+        MyBatis1Config.class,
+        MyBatis2Config.class
+})
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

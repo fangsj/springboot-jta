@@ -13,7 +13,12 @@
 //*****************************************************************************
 package org.fangsj.learn.spring.boot.jta.controller;
 
-import org.fangsj.learn.spring.boot.jta.dao.ExampleMapper;
+import javax.transaction.Transactional;
+
+import org.fangsj.learn.spring.boot.jta.dao.koss2.Example2Mapper;
+import org.fangsj.learn.spring.boot.jta.dao.koss6.ExampleMapper;
+import org.fangsj.learn.spring.boot.jta.domain.koss2.Example2;
+import org.fangsj.learn.spring.boot.jta.domain.koss6.Example;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,10 +35,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ExampleController {
     @Autowired
     private ExampleMapper exampleMapper;
+    @Autowired
+    private Example2Mapper example2Mapper;
 
     @RequestMapping
     @ResponseBody
+    @Transactional
     public Object index() {
-        return exampleMapper.selectList(null);
+        Example2 example2 = new Example2();
+        example2.setTitle("方施杰");
+        example2Mapper.insert(example2);
+        Example example = new Example();
+        example.setTitle("方施杰2");
+        exampleMapper.insert(example);
+        int a = 1 / 0;
+        return null;
     }
 }

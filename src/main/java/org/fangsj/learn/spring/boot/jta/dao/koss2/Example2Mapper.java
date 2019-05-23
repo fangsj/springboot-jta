@@ -11,9 +11,9 @@
 // Keisdom Pte Ltd.  Copyright (c) 2019.  All Rights Reserved.
 //
 //*****************************************************************************
-package org.fangsj.learn.spring.boot.jta.dao;
+package org.fangsj.learn.spring.boot.jta.dao.koss2;
 
-import org.fangsj.learn.spring.boot.jta.domain.Example;
+import org.fangsj.learn.spring.boot.jta.domain.koss2.Example2;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -23,6 +23,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author fangshijie
  * @date 2019-05-22 15:25
  */
-public interface ExampleMapper extends BaseMapper<Example> {
+public interface Example2Mapper extends BaseMapper<Example2> {
 
 }

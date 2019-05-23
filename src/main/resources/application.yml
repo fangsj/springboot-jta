@@ -4,18 +4,30 @@ spring:
       additional-exclude: "**/*.log"
     livereload:
       enabled: false
-  datasource:
-    url: jdbc:mysql://192.168.2.253:3306/koss6.0?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+  datasource1:
+    url: jdbc:mysql://192.168.2.253:3306/koss_dev?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
     username: root
     password: Admin123
-    driver-class-name: com.mysql.jdbc.Driver
-    druid:
-      initial-size: 1
-      min-idle: 1
-      max-active: 20
-      test-on-borrow: true
-      stat-view-servlet:
-        allow: true
+    driverClassName: com.mysql.jdbc.Driver
+#    druid:
+#      initial-size: 1
+#      min-idle: 1
+#      max-active: 20
+#      test-on-borrow: true
+#      stat-view-servlet:
+#        allow: true
+  datasource2:
+    url: jdbc:mysql://192.168.2.253:3306/koss_2?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: Admin123
+    driverClassName: com.mysql.jdbc.Driver
+#    druid:
+#      initial-size: 1
+#      min-idle: 1
+#      max-active: 20
+#      test-on-borrow: true
+#      stat-view-servlet:
+#        allow: true
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*Mapper.xml
   type-aliases-package: org.fangsj.learn.spring.boot.jta.domain
@@ -30,3 +42,7 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     jdbc-type-for-null: null
+logging:
+  level:
+    com: debug
+    org.fangsj: debug

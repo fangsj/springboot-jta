@@ -11,11 +11,14 @@
 // Keisdom Pte Ltd.  Copyright (c) 2019.  All Rights Reserved.
 //
 //*****************************************************************************
-package org.fangsj.learn.spring.boot.jta.domain;
+package org.fangsj.learn.spring.boot.jta.domain.koss2;
 
 import java.util.Date;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+
+import static com.baomidou.mybatisplus.annotation.IdType.AUTO;
 
 /**
  * 说明
@@ -23,7 +26,7 @@ import com.baomidou.mybatisplus.annotation.TableId;
  * @author fangshijie
  * @date 2019-05-22 15:22
  */
-public class Example {
+public class Example2 extends Model<Example2> {
     @TableId
     private Integer rowId;
     private String type;
